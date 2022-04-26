@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ~/.gitshots
+now=$(date +"%Y_%m_%d__%H_%M_%S")
+shot="film_${now}.mp4"
+
+ffmpeg -framerate 4 -pattern_type glob -i "shot_*.jpg" "$shot"
